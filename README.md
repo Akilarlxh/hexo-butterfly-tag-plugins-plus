@@ -13,17 +13,17 @@
   在站点配置文件`_config.yml`或者主题配置文件`_config.butterfly.yml`中添加
 
   ```yaml
-    # tag-plugins-plus
-    # see https://akilar.top/posts/615e2dec/
+  # tag-plugins-plus
+  # see https://akilar.top/posts/615e2dec/
   tag_plugins:
     enable: true # 开关
     priority: 5 #过滤器优先权
     issues: false #issues标签开关
     CDN:
-      - anima: https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css #动画标签anima的依赖
-      - jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
-      - issues: https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js #issues标签依赖
-      - iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
+      anima: https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css #动画标签anima的依赖
+      jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
+      issues: https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js #issues标签依赖
+      iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
   ```
 3. 参数释义
 

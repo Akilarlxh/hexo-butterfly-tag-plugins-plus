@@ -1,7 +1,7 @@
 {
   "name": "hexo-butterfly-tag-plugins-plus",
-  "version": "0.0.2",
-  "description": "A number of tab plugins for theme-butterfly",
+  "version": "0.0.3",
+  "description": "A number of tag plugins for theme-butterfly",
   "main": "index.js",
   "scripts": {
     "eslint": "eslint ."
