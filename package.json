@@ -1,0 +1,30 @@
+{
+  "name": "hexo-butterfly-tag-plugins-plus",
+  "version": "0.0.1",
+  "description": "A number of tab plugins for theme-butterfly",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint ."
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib/",
+    "index.js"
+  ],
+  "keywords": [
+    "hexo",
+    "tab_plugins",
+    "volantis",
+    "butterfly",
+    "theme-butterfly",
+    "plugins"
+  ],
+  "author": "akilarlxh",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Akilarlxh/hexo-butterfly-tag-plugins-plus.git"
+  }
+}
