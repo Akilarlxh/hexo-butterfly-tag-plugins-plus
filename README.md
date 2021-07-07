@@ -8,8 +8,13 @@
   ```bash
   npm install hexo-butterfly-tag-plugins-plus --save
   ```
+2. 考虑到hexo自带的markdown渲染插件`hexo-renderer-marked`与外挂标签语法的兼容性较差，建议您将其替换成[hexo-renderer-kramed](https://www.npmjs.com/package/hexo-renderer-kramed)
+  ```bash
+  npm uninstall hexo-renderer-marked --save
+  npm install hexo-renderer-kramed --save
+  ```
 
-2. 添加配置信息，以下为写法示例
+3. 添加配置信息，以下为写法示例
   在站点配置文件`_config.yml`或者主题配置文件`_config.butterfly.yml`中添加
 
   ```yaml
@@ -25,7 +30,7 @@
       issues: https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js #issues标签依赖
       iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
   ```
-3. 参数释义
+4. 参数释义
 
   |参数|备选值/类型|释义|
   |:--|:--|:--|

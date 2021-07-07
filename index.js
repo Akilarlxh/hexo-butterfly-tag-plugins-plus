@@ -31,7 +31,7 @@ hexo.extend.filter.register('after_generate', function (locals) {
   if (data.issues){
     hexo.extend.injector.register('body_end', js_text, "default");
   }
-  console.log(data.iconfontCDN)
+
   if (data.iconfontCDN){
     hexo.extend.injector.register('body_end', iconfont_symbol, "default");
   }
