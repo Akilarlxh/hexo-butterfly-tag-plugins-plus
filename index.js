@@ -14,14 +14,15 @@ hexo.extend.filter.register('after_generate', function (locals) {
       jqueryCDN: config.CDN.jquery ? urlFor(config.CDN.jquery) : 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
       issuesCDN: config.CDN.issues ? urlFor(config.CDN.issues) : 'https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js',
       iconfontCDN: config.CDN.iconfont
+      carouselCDN: config.CDN.carousel ? urlFor(config.CDN.carousel) : 'https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins=plus@latest/lib/carousel-touch.min.js'
     }
 
   //cdn资源声明
   //样式资源
 
-  //样式资源
-  const css_text = `<link rel="stylesheet" href="${data.animaCDN}" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.min.css" media="defer" onload="this.media='all'">`
-  //脚本资源
+  //head引入资源
+  const css_text = `<link rel="stylesheet" href="${data.animaCDN}" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><script async src="${data.carouselCDN}"></script>`
+  //bottom引入资源
   const js_text = `<script defer src="${data.jqueryCDN}"></script><script defer src="${data.issuesCDN}"></script>`
   //iconfont symbol引入
   const iconfont_symbol = `<script async src="${data.iconfontCDN}"></script>`
@@ -608,3 +609,13 @@ function tip (args, content) {
 }
 
 hexo.extend.tag.register('tip',tip, { ends: true })
+
+//carousel.js
+function carousel (args, content) {
+  args = args.join(' ').split(',')
+  let carouselId = args[0]
+  let carouselname = args[1]?args[1]:'carousel'
+  return `<div id='${carouselId}' class='carousel'><div id="${carouselId}-drag-container" class="drag-container"><div id="${carouselId}-spin-container" class="spin-container">${hexo.render.renderSync({ text: content, engine: 'markdown' }).replace(/^(\s|<p>)+|(\s|<\/p>)+$/g, '')}<p>${carouselname}</p></div><div id="${carouselId}-carousel-ground" class="carousel-ground"></div></div></div><script type="text/javascript">carouselinit('${carouselId}');</script>`
+}
+
+hexo.extend.tag.register('carousel',carousel,{ ends: true });
