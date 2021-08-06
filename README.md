@@ -29,6 +29,7 @@
       jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
       issues: https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js #issues标签依赖
       iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
+      carousel: https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js
   ```
 4. 参数释义
 
@@ -41,6 +42,7 @@
   |CDN.jquery|URL|【可选】issues标签依赖|
   |CDN.issues|URL|【可选】issues标签依赖|
   |CDN.iconfont|URL|【可选】iconfont标签symbol样式引入|
+  |CDN.carousel|URL|【可选】carousel旋转相册标签鼠标拖动依赖|
 
 # 外挂标签文档
 [Tag Plugins Plus](https://akilar.top/posts/615e2dec/)

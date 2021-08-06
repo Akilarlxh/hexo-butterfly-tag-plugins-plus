@@ -14,7 +14,7 @@ hexo.extend.filter.register('after_generate', function (locals) {
       jqueryCDN: config.CDN.jquery ? urlFor(config.CDN.jquery) : 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
       issuesCDN: config.CDN.issues ? urlFor(config.CDN.issues) : 'https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js',
       iconfontCDN: config.CDN.iconfont
-      carouselCDN: config.CDN.carousel ? urlFor(config.CDN.carousel) : 'https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins=plus@latest/lib/carousel-touch.min.js'
+      carouselCDN: config.CDN.carousel ? urlFor(config.CDN.carousel) : 'https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js'
     }
 
   //cdn资源声明
