@@ -1474,6 +1474,10 @@ div.timenode .meta:after {
   box-shadow: 0 3px 5px rgba(32,160,255,0.5);
   margin-bottom: 20px;
 }
+.tip p {
+  margin: 0 !important;
+  padding: 0.5rem 0;
+}
 .tip:before {
   background: #20a0ff;
   background: -webkit-gradient(linear, left bottom, left top, from(#0092ff), to(#20b8ff));
