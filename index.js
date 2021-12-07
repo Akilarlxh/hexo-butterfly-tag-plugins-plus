@@ -145,13 +145,13 @@ function postFolding(args, content) {
     title = args[0].trim()
   }
   if (style != undefined) {
-    return `<details ${style}><summary> ${title} </summary>
+    return `<details class="folding-tag" ${style}><summary> ${title} </summary>
               <div class='content'>
               ${hexo.render.renderSync({text: content, engine: 'markdown'}).split('\n').join('')}
               </div>
             </details>`;
   } else {
-    return `<details><summary> ${title} </summary>
+    return `<details class="folding-tag"><summary> ${title} </summary>
               <div class='content'>
               ${hexo.render.renderSync({text: content, engine: 'markdown'}).split('\n').join('')}
               </div>
@@ -407,7 +407,7 @@ hexo.extend.tag.register('link', function(args) {
   result += '<div class="tag link"><a class="link-card" title="' + text + '" href="' + url + '">';
   // left
   result += '<div class="left">';
-  result += '<img src="' + (img || hexo.theme.config.tag_plugins.link.placeholder) + '"/>';
+  result += '<img src="' + (img || (hexo.config.tag_plugins || hexo.theme.config.tag_plugins)) + '"/>';
   result += '</div>';
   // right
   result += '<div class="right"><p class="text">' + text + '</p><p class="url">' + url + '</p></div>';

@@ -24,6 +24,8 @@
     enable: true # 开关
     priority: 5 #过滤器优先权
     issues: false #issues标签开关
+    link:
+      placeholder: /img/link.png #link_card标签默认的图标图片
     CDN:
       anima: https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css #动画标签anima的依赖
       jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
@@ -38,6 +40,7 @@
   |enable|true/false|【必选】控制开关|
   |priority|number|【可选】过滤器优先级，数值越小，执行越早，默认为10，选填|
   |issues|true/false|【可选】issues标签控制开关，默认为false|
+  |link.placeholder|【必选】link卡片外挂标签的默认图标|
   |CDN.anima|URL|【可选】动画标签anima的依赖|
   |CDN.jquery|URL|【可选】issues标签依赖|
   |CDN.issues|URL|【可选】issues标签依赖|
