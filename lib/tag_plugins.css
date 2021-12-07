@@ -591,7 +591,7 @@ img.medium-zoom-image.entered.loaded.medium-zoom-image--opened {
 [data-theme="dark"] .checkbox {
   filter: brightness(0.7);
 }
-details {
+details.folding-tag {
   display: block;
   padding: 16px;
   margin: 1em 0;
@@ -604,7 +604,7 @@ details {
   -o-transition: all 0.28s ease;
   border: 1px solid #f6f6f6;
 }
-details summary {
+details.folding-tag summary {
   cursor: pointer;
   padding: 16px;
   margin: -16px;
@@ -615,20 +615,20 @@ details summary {
   position: relative;
   line-height: normal;
 }
-details summary > p,
-details summary > h1,
-details summary > h2,
-details summary > h3,
-details summary > h4,
-details summary > h5,
-details summary > h6 {
+details.folding-tag summary > p,
+details.folding-tag summary > h1,
+details.folding-tag summary > h2,
+details.folding-tag summary > h3,
+details.folding-tag summary > h4,
+details.folding-tag summary > h5,
+details.folding-tag summary > h6 {
   display: inline;
   border-bottom: none !important;
 }
-details summary:hover {
+details.folding-tag summary:hover {
   color: #444;
 }
-details summary:hover:after {
+details.folding-tag summary:hover:after {
   position: absolute;
   content: '+';
   text-align: center;
@@ -636,132 +636,132 @@ details summary:hover:after {
   transform: translateY(-50%);
   right: 16px;
 }
-details >summary {
+details.folding-tag >summary {
   background: #f6f6f6;
 }
-details[purple] {
+details.folding-tag[purple] {
   border-color: #fae7fd;
 }
-details[purple] >summary {
+details.folding-tag[purple] >summary {
   background: #fae7fd;
 }
-details[blue] {
+details.folding-tag[blue] {
   border-color: #e8f4fd;
 }
-details[blue] >summary {
+details.folding-tag[blue] >summary {
   background: #e8f4fd;
 }
-details[cyan] {
+details.folding-tag[cyan] {
   border-color: #e8fafe;
 }
-details[cyan] >summary {
+details.folding-tag[cyan] >summary {
   background: #e8fafe;
 }
-details[green] {
+details.folding-tag[green] {
   border-color: #ebf9ed;
 }
-details[green] >summary {
+details.folding-tag[green] >summary {
   background: #ebf9ed;
 }
-details[yellow] {
+details.folding-tag[yellow] {
   border-color: #fff8e9;
 }
-details[yellow] >summary {
+details.folding-tag[yellow] >summary {
   background: #fff8e9;
 }
-details[orange] {
+details.folding-tag[orange] {
   border-color: #fdf1e7;
 }
-details[orange] >summary {
+details.folding-tag[orange] >summary {
   background: #fdf1e7;
 }
-details[red] {
+details.folding-tag[red] {
   border-color: #feefee;
 }
-details[red] >summary {
+details.folding-tag[red] >summary {
   background: #feefee;
 }
-details[open] {
+details.folding-tag[open] {
   border-color: rgba(68,68,68,0.2);
 }
-details[open] >summary {
+details.folding-tag[open] >summary {
   border-bottom: 1px solid rgba(68,68,68,0.2);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-details[open][purple] {
+details.folding-tag[open][purple] {
   border-color: rgba(208,23,238,0.3);
 }
-details[open][purple] >summary {
+details.folding-tag[open][purple] >summary {
   border-bottom-color: rgba(208,23,238,0.3);
 }
-details[open][blue] {
+details.folding-tag[open][blue] {
   border-color: rgba(33,150,243,0.3);
 }
-details[open][blue] >summary {
+details.folding-tag[open][blue] >summary {
   border-bottom-color: rgba(33,150,243,0.3);
 }
-details[open][cyan] {
+details.folding-tag[open][cyan] {
   border-color: rgba(27,205,252,0.3);
 }
-details[open][cyan] >summary {
+details.folding-tag[open][cyan] >summary {
   border-bottom-color: rgba(27,205,252,0.3);
 }
-details[open][green] {
+details.folding-tag[open][green] {
   border-color: rgba(61,197,80,0.3);
 }
-details[open][green] >summary {
+details.folding-tag[open][green] >summary {
   border-bottom-color: rgba(61,197,80,0.3);
 }
-details[open][yellow] {
+details.folding-tag[open][yellow] {
   border-color: rgba(255,189,43,0.3);
 }
-details[open][yellow] >summary {
+details.folding-tag[open][yellow] >summary {
   border-bottom-color: rgba(255,189,43,0.3);
 }
-details[open][orange] {
+details.folding-tag[open][orange] {
   border-color: rgba(236,118,22,0.3);
 }
-details[open][orange] >summary {
+details.folding-tag[open][orange] >summary {
   border-bottom-color: rgba(236,118,22,0.3);
 }
-details[open][red] {
+details.folding-tag[open][red] {
   border-color: rgba(254,95,88,0.3);
 }
-details[open][red] >summary {
+details.folding-tag[open][red] >summary {
   border-bottom-color: rgba(254,95,88,0.3);
 }
-details[open] >summary {
+details.folding-tag[open] >summary {
   color: #444;
   margin-bottom: 0;
 }
-details[open] >summary:hover:after {
+details.folding-tag[open] >summary:hover:after {
   content: '-';
 }
-details[open] >div.content {
+details.folding-tag[open] >div.content {
   padding: 16px;
   margin: -16px;
   margin-top: 0;
 }
-details[open] >div.content p>a:hover {
+details.folding-tag[open] >div.content p>a:hover {
   text-decoration: underline;
 }
-details[open] >div.content > p:first-child,
-details[open] >div.content > .tabs:first-child,
-details[open] >div.content > ul:first-child,
-details[open] >div.content > ol:first-child,
-details[open] >div.content > .highlight:first-child,
-details[open] >div.content > .note:first-child,
-details[open] >div.content > details:first-child {
+details.folding-tag[open] >div.content > p:first-child,
+details.folding-tag[open] >div.content > .tabs:first-child,
+details.folding-tag[open] >div.content > ul:first-child,
+details.folding-tag[open] >div.content > ol:first-child,
+details.folding-tag[open] >div.content > .highlight:first-child,
+details.folding-tag[open] >div.content > .note:first-child,
+details.folding-tag[open] >div.content > details:first-child {
   margin-top: 0;
 }
-details[open] >div.content > p:last-child,
-details[open] >div.content > .tabs:last-child,
-details[open] >div.content > ul:last-child,
-details[open] >div.content > ol:last-child,
-details[open] >div.content > .highlight:last-child,
-details[open] >div.content > .note:last-child,
-details[open] >div.content > details:last-child {
+details.folding-tag[open] >div.content > p:last-child,
+details.folding-tag[open] >div.content > .tabs:last-child,
+details.folding-tag[open] >div.content > ul:last-child,
+details.folding-tag[open] >div.content > ol:last-child,
+details.folding-tag[open] >div.content > .highlight:last-child,
+details.folding-tag[open] >div.content > .note:last-child,
+details.folding-tag[open] >div.content > details:last-child {
   margin-bottom: 0;
 }
 [data-theme="dark"] details[open] > div.content {
