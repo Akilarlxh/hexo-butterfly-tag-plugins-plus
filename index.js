@@ -388,6 +388,7 @@ hexo.extend.tag.register('issues', function(args) {
 // {% link title, url %}
 // {% link title, url, img %}
 hexo.extend.tag.register('link', function(args) {
+  var configtemp = hexo.config.tag_plugins || hexo.theme.config.tag_plugins
   args = args.join(' ').split(',')
   let text = ''
   let url = ''
@@ -407,7 +408,7 @@ hexo.extend.tag.register('link', function(args) {
   result += '<div class="tag link"><a class="link-card" title="' + text + '" href="' + url + '">';
   // left
   result += '<div class="left">';
-  result += '<img src="' + (img || (hexo.config.tag_plugins.link.placeholder || hexo.theme.config.tag_plugins.link.placeholder)) + '"/>';
+  result += '<img src="' + (img || configtemp.link.placeholder) + '"/>';
   result += '</div>';
   // right
   result += '<div class="right"><p class="text">' + text + '</p><p class="url">' + url + '</p></div>';
