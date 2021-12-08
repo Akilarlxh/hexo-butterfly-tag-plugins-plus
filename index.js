@@ -407,7 +407,7 @@ hexo.extend.tag.register('link', function(args) {
   result += '<div class="tag link"><a class="link-card" title="' + text + '" href="' + url + '">';
   // left
   result += '<div class="left">';
-  result += '<img src="' + (img || (hexo.config.tag_plugins || hexo.theme.config.tag_plugins)) + '"/>';
+  result += '<img src="' + (img || (hexo.config.tag_plugins.link.placeholder || hexo.theme.config.tag_plugins.link.placeholder)) + '"/>';
   result += '</div>';
   // right
   result += '<div class="right"><p class="text">' + text + '</p><p class="url">' + url + '</p></div>';
