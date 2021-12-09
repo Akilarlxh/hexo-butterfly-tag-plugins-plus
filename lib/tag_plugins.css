@@ -796,6 +796,7 @@ img.inline {
 }
 p .img-alt {
   display: inline-block;
+  width: 100%;
 }
 s,
 del {
