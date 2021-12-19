@@ -20,8 +20,8 @@ hexo.extend.filter.register('after_generate', function (locals) {
   //cdn资源声明
   //样式资源
 
-  //head引入资源
-  const css_text = `<link rel="stylesheet" href="${data.animaCDN}" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><script async src="${data.carouselCDN}"></script>`
+  //head引入资源// tag_plugins改成我这边仓库的地址
+  const css_text = `<link rel="stylesheet" href="${data.animaCDN}" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ACG-Q/hexo-butterfly-tag-plugins-plus@master/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script async src="${data.carouselCDN}"></script>`
   //bottom引入资源
   const js_text = `<script defer src="${data.jqueryCDN}"></script><script defer src="${data.issuesCDN}"></script>`
   //iconfont symbol引入
@@ -65,16 +65,20 @@ function postCell(args, content) {
   let icon = ''
   let img = 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/d570170f4f12e1ee829ca0e85a7dffeb77343a.svg'
   if (args.length > 2) {
-    if (args[2].indexOf(' fa-') > -1) {
-      icon = args[2].trim()
-    } else {
+    if (args[2].match(/^(http[s]\:[\/|\\]{2})|([\/|\\]{2})/i)) {
       img = args[2].trim()
+    } else {
+      icon = args[2].trim()
     }
   }
   if (icon.length > 0) {
-    return `<a class="button" ${url} title='${text}'><i class='${icon}'></i>${text}</a>`
+    // .fa, .fab, .fad, .fal, .far, .fas
+    if(icon.match(/fa |fab |fad |fal |far |fas /i)){
+      return `<a class="button" ${url} title='${text}'><i class='${icon}'></i>${text}</a>`
+    }
+    return `<a class="button" ${url} title='${text}'><svg class="icon" aria-hidden="true"><use xlink:href="#${icon}"></use></svg>${text}</a>`
   } else {
-    return `<a class="button" ${url} title='${text}'><img src='${img}'>${text}</a>`
+    return `<a class="button" ${url} title='${text}' style="padding-top: 24px;"><img src='${img}' style="position: absolute;transform: translate(0, -100%);">${text}</a>`
   }
 }
 hexo.extend.tag.register('btns', postBtns, {ends: true});

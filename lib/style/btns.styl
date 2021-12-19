@@ -59,7 +59,8 @@ div
       text-align center
       background #f6f6f6
       border-radius 4px
-      & > i
+      & > i,
+      & > svg
         background #2196f3!important
         &:first-child
           color #fff
@@ -169,7 +170,8 @@ div.btns a
           width calc(100% / 2 - 16px)
 
 div.btns a > img:first-child,
-div.btns a > i:first-child
+div.btns a > i:first-child,
+div.btns a > svg:first-child
   transition all 0.28s ease
   -moz-transition all 0.28s ease
   -webkit-transition all 0.28s ease
@@ -185,7 +187,8 @@ div.btns a > i:first-child
   font-size 28px
 
 div.btns a > img:first-child.auto,
-div.btns a > i:first-child.auto
+div.btns a > i:first-child.auto,
+div.btns a > svg:first-child.auto
   width auto
 
 div.btns a p,
@@ -200,14 +203,17 @@ div.btns a[href]:hover b
   color #ff5722
 
 div.btns a[href]:hover > img:first-child,
-div.btns a[href]:hover > i:first-child
+div.btns a[href]:hover > i:first-child,
+div.btns a[href]:hover > svg:first-child
   transform scale(1.1) translateY(-8px)
   box-shadow 0 4px 8px 0 rgba(0, 0, 0, 0.1)
 
 div.btns.circle a > img:first-child,
-div.btns.circle a > i:first-child
+div.btns.circle a > i:first-child,
+div.btns.circle a > svg:first-child
   border-radius 32px
 
 div.btns.rounded a > img:first-child,
-div.btns.rounded a > i:first-child
+div.btns.rounded a > i:first-child,
+div.btns.circle a > svg:first-child
   border-radius 16px
