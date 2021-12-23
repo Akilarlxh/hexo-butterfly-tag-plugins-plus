@@ -10,18 +10,19 @@ hexo.extend.filter.register('after_generate', function (locals) {
   // 集体声明配置项
     const data = {
       issues: config.issues ? config.issues : false,
-      animaCDN: config.CDN.anima ? urlFor(config.CDN.anima) : 'https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css',
-      jqueryCDN: config.CDN.jquery ? urlFor(config.CDN.jquery) : 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
-      issuesCDN: config.CDN.issues ? urlFor(config.CDN.issues) : 'https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js',
+      animaCDN: config.CDN.anima ? urlFor(config.CDN.anima) : 'https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css',
+      jqueryCDN: config.CDN.jquery ? urlFor(config.CDN.jquery) : 'https://unpkg.zhimg.com/jquery@latest/dist/jquery.min.js',
+      issuesCDN: config.CDN.issues ? urlFor(config.CDN.issues) : 'https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js',
       iconfontCDN: config.CDN.iconfont,
-      carouselCDN: config.CDN.carousel ? urlFor(config.CDN.carousel) : 'https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js'
+      carouselCDN: config.CDN.carousel ? urlFor(config.CDN.carousel) : 'https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js',
+      tag_plugins_css: config.CDN.tag_plugins_css ? urlFor(config.CDN.tag_plugins_css) : 'https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css'
     }
 
   //cdn资源声明
   //样式资源
 
   //head引入资源
-  const css_text = `<link rel="stylesheet" href="${data.animaCDN}" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><script async src="${data.carouselCDN}"></script>`
+  const css_text = `<link rel="stylesheet" href="${data.animaCDN}" media="defer" onload="this.media='all'"><link rel="stylesheet" href="${data.tag_plugins_css}" media="defer" onload="this.media='all'"><script async src="${data.carouselCDN}"></script>`
   //bottom引入资源
   const js_text = `<script defer src="${data.jqueryCDN}"></script><script defer src="${data.issuesCDN}"></script>`
   //iconfont symbol引入
@@ -63,7 +64,7 @@ function postCell(args, content) {
     url = "href='" + url + "'"
   }
   let icon = ''
-  let img = 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@3/img/placeholder/d570170f4f12e1ee829ca0e85a7dffeb77343a.svg'
+  let img = 'https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/default.svg'
   if (args.length > 2) {
     if (args[2].indexOf(' fa-') > -1) {
       icon = args[2].trim()

@@ -27,11 +27,12 @@
     link:
       placeholder: /img/link.png #link_card标签默认的图标图片
     CDN:
-      anima: https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css #动画标签anima的依赖
-      jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
-      issues: https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js #issues标签依赖
+      anima: https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+      jquery: https://unpkg.zhimg.com/jquery@latest/dist/jquery.min.js #issues标签依赖
+      issues: https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
       iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
-      carousel: https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js
+      carousel: https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
+      tag_plugins_css: https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
   ```
 4. 参数释义
 
@@ -46,6 +47,7 @@
   |CDN.issues|URL|【可选】issues标签依赖|
   |CDN.iconfont|URL|【可选】iconfont标签symbol样式引入|
   |CDN.carousel|URL|【可选】carousel旋转相册标签鼠标拖动依赖|
+  |CDN.tag_plugins_css|URL|【可选】外挂标签样式的CSS依赖|
 
 # 外挂标签文档
 [Tag Plugins Plus](https://akilar.top/posts/615e2dec/)
