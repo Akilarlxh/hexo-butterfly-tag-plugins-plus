@@ -51,3 +51,27 @@
 
 # 外挂标签文档
 [Tag Plugins Plus](https://akilar.top/posts/615e2dec/)
+
+# update-log
+- `2022-01-26：1.0.11`
+  1. butterfly_v4.0新增了`timeline`标签，与本插件标签名冲突。可以选择改用标签文档中的源码配置方案或者删除主题原有的timeline标签文件`Blogroot\themes\butterfly\scripts\tag\timeline.js`和`Blogroot\themes\butterfly\source\css\_tags\timeline.styl`。
+  2. 修复了carousel标签刷新后不加载的bug。
+- `2021-12-23：1.0.10`
+  1. 将所有CDN链接迁移至`unpkg.zhimg.com`。
+  2. 外露所有CDN配置项，支持读者自行更改CDN源。
+- `2021-12-09：1.0.9`
+  1. 调整`link`标签的默认图片缺省值适配，新增`tag_plugins.link.placeholder`配置项。
+  2. 因为新增了默认图片，新增配置项，所以需要更新版本。如果本身使用`link`标签就有自己加图片的习惯的，无需升级。
+  3. 修复img-alt靠左的问题
+- `2021-12-07：1.0.5`
+  1. 调整 `folding `标签，解决与 twikoo 设置面板样式的冲突问题
+  2. 因为调整了 `folding` 标签的编译函数，低版本会出现 `folding` 样式失效的情况，请各位更新至最新版本。
+- `2021-12-01：1.0.4`
+  1. 调整`tip`标签，字体垂直居中
+- `2021-08-06：1.0.3`
+  1. 新增`carousel`旋转相册标签
+- `2021-07-07：1.0.0`
+  1. 使用 npm 插件安装。
+  2. 测试版本为 `butterfly_v3.1.0、3.3.0、3.7.8、3.8.0`
+  3. 插件写法调整为高内聚，理论上不受 butterfly 主题版本影响。~~除非主题又整同名标签~~
+  4. 为了获得完整效果，建议打开主题的`beautify`配置项和`theme_color`配置项。

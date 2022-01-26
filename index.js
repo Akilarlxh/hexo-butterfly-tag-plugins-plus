@@ -22,7 +22,7 @@ hexo.extend.filter.register('after_generate', function (locals) {
   //样式资源
 
   //head引入资源
-  const css_text = `<link rel="stylesheet" href="${data.animaCDN}" media="defer" onload="this.media='all'"><link rel="stylesheet" href="${data.tag_plugins_css}" media="defer" onload="this.media='all'"><script async src="${data.carouselCDN}"></script>`
+  const css_text = `<link rel="stylesheet" href="${data.animaCDN}" media="defer" onload="this.media='all'"><link rel="stylesheet" href="${data.tag_plugins_css}" media="defer" onload="this.media='all'"><script src="${data.carouselCDN}"></script>`
   //bottom引入资源
   const js_text = `<script defer src="${data.jqueryCDN}"></script><script defer src="${data.issuesCDN}"></script>`
   //iconfont symbol引入
