@@ -53,6 +53,8 @@
 [Tag Plugins Plus](https://akilar.top/posts/615e2dec/)
 
 # update-log
+- `2022-02-14：1.0.11`
+  1. 剔除了link卡片的无效css属性。
 - `2022-01-26：1.0.11`
   1. butterfly_v4.0新增了`timeline`标签，与本插件标签名冲突。可以选择改用标签文档中的源码配置方案或者删除主题原有的timeline标签文件`Blogroot\themes\butterfly\scripts\tag\timeline.js`和`Blogroot\themes\butterfly\source\css\_tags\timeline.styl`。
   2. 修复了carousel标签刷新后不加载的bug。

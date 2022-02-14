@@ -884,7 +884,7 @@ kbd {
 #article-container a.link-card div.left img {
   display: block;
   position: absolute;
-  border-radius: 8px/4;
+  border-radius: 2px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
