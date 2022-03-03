@@ -45,15 +45,18 @@
   |CDN.anima|URL|【可选】动画标签anima的依赖|
   |CDN.jquery|URL|【可选】issues标签依赖|
   |CDN.issues|URL|【可选】issues标签依赖|
-  |CDN.iconfont|URL|【可选】iconfont标签symbol样式引入|
-  |CDN.carousel|URL|【可选】carousel旋转相册标签鼠标拖动依赖|
+  |CDN.iconfont|URL|【可选】iconfont标签symbol样式引入，如果不想引入，则设为false|
+  |CDN.carousel|URL|【可选】carousel旋转相册标签鼠标拖动依赖，如果不想引入则设为false|
   |CDN.tag_plugins_css|URL|【可选】外挂标签样式的CSS依赖|
 
 # 外挂标签文档
 [Tag Plugins Plus](https://akilar.top/posts/615e2dec/)
 
 # update-log
-- `2022-02-14：1.0.11`
+- `2022-03-03：1.0.13`
+  1. 新增开关逻辑，iconfont，carousel设为false则不引入。
+  2. site标签新增灯箱屏蔽，不再支持点击放大图片。
+- `2022-02-14：1.0.12`
   1. 剔除了link卡片的无效css属性。
 - `2022-01-26：1.0.11`
   1. butterfly_v4.0新增了`timeline`标签，与本插件标签名冲突。可以选择改用标签文档中的源码配置方案或者删除主题原有的timeline标签文件`Blogroot\themes\butterfly\scripts\tag\timeline.js`和`Blogroot\themes\butterfly\source\css\_tags\timeline.styl`。

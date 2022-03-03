@@ -14,7 +14,7 @@ hexo.extend.filter.register('after_generate', function (locals) {
       jqueryCDN: config.CDN.jquery ? urlFor(config.CDN.jquery) : 'https://unpkg.zhimg.com/jquery@latest/dist/jquery.min.js',
       issuesCDN: config.CDN.issues ? urlFor(config.CDN.issues) : 'https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js',
       iconfontCDN: config.CDN.iconfont,
-      carouselCDN: config.CDN.carousel ? urlFor(config.CDN.carousel) : 'https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js',
+      carouselCDN: config.CDN.carousel,
       tag_plugins_css: config.CDN.tag_plugins_css ? urlFor(config.CDN.tag_plugins_css) : 'https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css'
     }
 
@@ -22,13 +22,18 @@ hexo.extend.filter.register('after_generate', function (locals) {
   //样式资源
 
   //head引入资源
-  const css_text = `<link rel="stylesheet" href="${data.animaCDN}" media="defer" onload="this.media='all'"><link rel="stylesheet" href="${data.tag_plugins_css}" media="defer" onload="this.media='all'"><script src="${data.carouselCDN}"></script>`
+  const css_text = `<link rel="stylesheet" href="${data.animaCDN}" media="defer" onload="this.media='all'"><link rel="stylesheet" href="${data.tag_plugins_css}" media="defer" onload="this.media='all'">`
+  const carousel_cdn = `<script src="${data.carouselCDN}"></script>`
   //bottom引入资源
   const js_text = `<script defer src="${data.jqueryCDN}"></script><script defer src="${data.issuesCDN}"></script>`
   //iconfont symbol引入
   const iconfont_symbol = `<script async src="${data.iconfontCDN}"></script>`
   // 注入脚本资源
   hexo.extend.injector.register('head_end', css_text, "default");
+  if (data.carouselCDN){
+    hexo.extend.injector.register('head_end', carousel_cdn, "default"); 
+  }
+
   // 注入样式资源
   if (data.issues){
     hexo.extend.injector.register('body_end', js_text, "default");

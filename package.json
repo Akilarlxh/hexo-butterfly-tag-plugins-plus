@@ -1,6 +1,6 @@
 {
   "name": "hexo-butterfly-tag-plugins-plus",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A number of tag plugins for theme-butterfly",
   "main": "index.js",
   "scripts": {
