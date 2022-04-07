@@ -53,6 +53,8 @@
 [Tag Plugins Plus](https://akilar.top/posts/615e2dec/)
 
 # update-log
+- `2022-04-07：1.0.15`
+  1. 调整bubble气泡标签样式动画逻辑，避免透明度变化瞬间遮挡正文。
 - `2022-04-07：1.0.14`
   1. 新增气泡注释bubble标签样式。效果比nota标签更好。
   2. 支持自定义气泡背景色。

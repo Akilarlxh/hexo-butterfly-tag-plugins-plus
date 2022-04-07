@@ -17,25 +17,27 @@
   &:hover
     transition: all 0.2s ease-in-out
     color: var(--bubble-text-hover-color)
+
     & + .bubble-notation
       .bubble-item
-        transition: opacity 0.5s ease-in-out
+        transform translate(-40px, 10px) rotateX(0deg)
+        transition: all 0.5s ease-in-out
         opacity: 1
 
 .bubble-notation
-  display inline-block
+  display: inline-block
 
 .bubble-item
-  transition: opacity 0.5s ease-in-out
+  transition: all 0.5s ease-in-out
   opacity 0
   color white
   z-index: 9999
   display flex
   position absolute
-  transform translate(-40px, 10px)
+  transform translate(-40px, 10px) rotateX(90deg)
   width auto
-  max-width 400px
-
   height auto
+  max-width 400px
+  overflow hidden
   padding 20px 10px 10px 10px
   clip-path polygon(5px 10px,20px 10px,30px 0,40px 10px,calc(100% - 5px) 10px,100% 15px,100% calc(100% - 5px),calc(100% - 5px) 100%,5px 100%,0 calc(100% - 5px),0 15px,5px 10px)
