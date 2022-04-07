@@ -31,7 +31,7 @@ hexo.extend.filter.register('after_generate', function (locals) {
   // 注入脚本资源
   hexo.extend.injector.register('head_end', css_text, "default");
   if (data.carouselCDN){
-    hexo.extend.injector.register('head_end', carousel_cdn, "default"); 
+    hexo.extend.injector.register('head_end', carousel_cdn, "default");
   }
 
   // 注入样式资源
@@ -470,6 +470,25 @@ function Nota(args) {
 
 hexo.extend.tag.register('nota', Nota);
 // {% nota 注释词汇 ,'注释内容，使用逗号间隔开了即可' %}
+
+
+//bubble.js
+
+function bubble (args) {
+  args = args.join(' ').split(',')
+  let content = args[0]
+  let notation = args[1]
+  let color = args[2] ? args[2] : '#71a4e3'
+
+  return `<span class="bubble-content">${content}</span><span class="bubble-notation"><span class="bubble-item" style="background-color:${color};">${notation}</span></span>`
+}
+
+hexo.extend.tag.register('bubble', bubble, { ends: false })
+
+/**
+ * notation
+ * {% bubble content,notation[,background-color] %}
+ */
 
 //poem.js
 'use strict'

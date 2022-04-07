@@ -47,12 +47,15 @@
   |CDN.issues|URL|【可选】issues标签依赖|
   |CDN.iconfont|URL|【可选】iconfont标签symbol样式引入，如果不想引入，则设为false|
   |CDN.carousel|URL|【可选】carousel旋转相册标签鼠标拖动依赖，如果不想引入则设为false|
-  |CDN.tag_plugins_css|URL|【可选】外挂标签样式的CSS依赖|
+  |CDN.tag_plugins_css|URL|【可选】外挂标签样式的CSS依赖，为避免CDN缓存延迟，建议将@latest改为具体版本号|
 
 # 外挂标签文档
 [Tag Plugins Plus](https://akilar.top/posts/615e2dec/)
 
 # update-log
+- `2022-04-07：1.0.14`
+  1. 新增气泡注释bubble标签样式。效果比nota标签更好。
+  2. 支持自定义气泡背景色。
 - `2022-03-03：1.0.13`
   1. 新增开关逻辑，iconfont，carousel设为false则不引入。
   2. site标签新增灯箱屏蔽，不再支持点击放大图片。
