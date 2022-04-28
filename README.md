@@ -53,6 +53,9 @@
 [Tag Plugins Plus](https://akilar.top/posts/615e2dec/)
 
 # update-log
+- `2022-04-28：1.0.16`
+  1. 移除timeline外挂标签，请使用butterfly新版自带的timeline标签，效果更好。
+  2. 修复tip标签自定义图标无效的bug
 - `2022-04-07：1.0.15`
   1. 调整bubble气泡标签样式动画逻辑，避免透明度变化瞬间遮挡正文。
 - `2022-04-07：1.0.14`
