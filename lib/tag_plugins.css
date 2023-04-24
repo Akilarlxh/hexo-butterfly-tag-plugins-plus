@@ -640,7 +640,7 @@ details.folding-tag {
   padding: 16px;
   margin: 1em 0;
   border-radius: 4px;
-  background: #fff;
+  background: #fff0;
   font-size: var(--global-font-size);
   transition: all 0.28s ease;
   -moz-transition: all 0.28s ease;
