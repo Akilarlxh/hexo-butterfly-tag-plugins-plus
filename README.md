@@ -33,6 +33,7 @@
       iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
       carousel: https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
       tag_plugins_css: https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
+      ghcard_url: https://github-readme-stats.vercel.app #API仓库https://github.com/anuraghazra/github-readme-stats
   ```
 4. 参数释义
 
@@ -48,11 +49,14 @@
   |CDN.iconfont|URL|【可选】iconfont标签symbol样式引入，如果不想引入，则设为false|
   |CDN.carousel|URL|【可选】carousel旋转相册标签鼠标拖动依赖，如果不想引入则设为false|
   |CDN.tag_plugins_css|URL|【可选】外挂标签样式的CSS依赖，为避免CDN缓存延迟，建议将@latest改为具体版本号|
+  |CDN.ghcard_url|URL|【可选】ghcard标签的API，可以自己部署，避免速度较慢或API挂掉。API仓库为https://github.com/anuraghazra/github-readme-stats，可自己部署至vercel|
 
 # 外挂标签文档
 [Tag Plugins Plus](https://akilar.top/posts/615e2dec/)
 
 # update-log
+- `2024-05-02: 1.0.18`
+  1. 新增ghcard的自定义API部署配置项。
 - `2022-04-29：1.0.17`
   1. 在bubble气泡外挂标签基础上新增reference引用文献标签
   2. 修复了bubble气泡外挂标签层级过高遮挡提示框的bug
